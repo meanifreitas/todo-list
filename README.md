@@ -1,4 +1,4 @@
-# :pushpin: To-do List
+# ✔️ To-do List
 
 This project was developed as a challenge on the React track from [Ignite](https://www.rocketseat.com.br/ignite).
 
