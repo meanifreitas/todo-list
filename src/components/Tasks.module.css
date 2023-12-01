@@ -13,10 +13,39 @@
 
 .links a {
   text-decoration: none;
-  color: var(--blue);
   font-size: .875rem;
   font-weight: 700;
   line-height: normal;
+}
+
+.created {
+  color: var(--blue);
+  display: flex;
+  gap: .5rem;
+}
+
+.createdCount {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 8px;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.done {
+  color: var(--purple);
+  display: flex;
+  gap: .5rem;
+}
+
+.doneCount {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 8px;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .tasks {
