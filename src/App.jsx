@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './App.module.css';
 
 import Header from './components/Header';
@@ -6,19 +8,37 @@ import Button from './components/Button';
 import Tasks from './components/Tasks';
 
 function App() {
+  const [text, setText] = React.useState(null);
+  const [tasks, setTasks] = React.useState([]);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (!text || text == '') {
+      //erro
+    } else {
+      setTasks([...tasks, {
+        checked: false,
+        description: text
+      }]);
+    }
+  }
+
+  function handleChange({target}) {
+    setText(target.value);
+  }
 
   return (
     <>
-    <header>
+    <header onSubmit={handleSubmit}>
       <Header />
-      <div className={styles.container}>
-        <Input />
+      <form className={styles.container}>
+        <Input onChange={handleChange}/>
         <Button title="Create"/>
-      </div>
+      </form>
     </header>
-    <Tasks />
+    <Tasks tasks={tasks}/>
     </>
-  )
+  );
 }
 
 export default App

@@ -1,7 +1,10 @@
 import Task from './Task';
 import styles from './Tasks.module.css';
 
-const Tasks = ({createdCount = 5, doneCount='2/5'}) => {
+const Tasks = ({tasks}) => {
+  let createdCount = 6;
+  let doneCount = '1/2';
+
   return (
     <section className={styles.container}>
       <div className={styles.links}>
@@ -9,9 +12,7 @@ const Tasks = ({createdCount = 5, doneCount='2/5'}) => {
         <a href="#" className={styles.done}>Done <span className={styles.doneCount}>{doneCount}</span></a>
       </div>
       <div className={styles.tasks}>
-        <Task />
-        <Task />
-        <Task />
+        {tasks && tasks.map(task => <Task key={task.description} checked={task.checked} description={task.description}/>)}
       </div>
   </section>
   );

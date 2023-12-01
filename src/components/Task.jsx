@@ -6,7 +6,7 @@ const Task = ({done, description}) => {
     <div className={styles.container}>
       <button className={styles.checkbox}>{done ? <CheckCircle size={17.5} /> : <Circle size={17.5}/> }</button>
       <div className={styles.content}>
-        <p>{description}description</p>
+        <p>{description}</p>
       </div>
       <button className={styles.remove}><Trash /></button>
     </div>
