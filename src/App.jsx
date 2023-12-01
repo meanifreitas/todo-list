@@ -1,7 +1,9 @@
+import styles from './App.module.css';
+
 import Header from './components/Header';
 import Input from './components/Input';
 import Button from './components/Button';
-import styles from './App.module.css';
+import Tasks from './components/Tasks';
 
 function App() {
 
@@ -13,8 +15,8 @@ function App() {
         <Input />
         <Button title="Create"/>
       </div>
-
     </header>
+    <Tasks />
     </>
   )
 }
