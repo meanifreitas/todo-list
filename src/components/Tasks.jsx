@@ -2,9 +2,8 @@ import Task from './Task';
 import styles from './Tasks.module.css';
 
 const Tasks = ({tasks}) => {
-  let createdCount = 6;
-  let doneCount = '1/2';
-
+  let createdCount = 5;
+  let doneCount = '2/5'
   return (
     <section className={styles.container}>
       <div className={styles.links}>

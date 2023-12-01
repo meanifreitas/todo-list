@@ -20,6 +20,7 @@ function App() {
         checked: false,
         description: text
       }]);
+      setText('');
     }
   }
 
@@ -32,7 +33,7 @@ function App() {
     <header onSubmit={handleSubmit}>
       <Header />
       <form className={styles.container}>
-        <Input onChange={handleChange}/>
+        <Input value={text} onChange={handleChange}/>
         <Button title="Create"/>
       </form>
     </header>
