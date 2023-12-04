@@ -48,13 +48,9 @@
   justify-content: center;
 }
 
-.tasks {
-  width: 50vw;
-}
-
 @media screen and (max-width: 1024px) {
 
-  .links, .tasks {
+  .links {
     width: 90vw;
   }
 }
