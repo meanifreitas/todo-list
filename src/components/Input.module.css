@@ -7,3 +7,9 @@
   color: var(--gray-100);
   width: 43vw;
 }
+
+@media screen and (max-width: 1024px) {
+  .input {
+    width: 60vw;
+  }
+}
